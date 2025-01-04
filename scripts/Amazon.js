@@ -1,15 +1,22 @@
-{/* <div class="product-container">
+
+let prodHtml='';
+const productGrid=  document.querySelector('.js-product-grid');
+products.forEach((product)=>{
+    prodHtml+=
+    `<div class="product-container">
                 <div class="product-img-container">
-                    <img class="prod-img">
+                    <img class="prod-img" src="${product.image}">
                 </div>
                 <div class="product-name">
-                    4
+                    ${product.name}
                 </div>
                 <div class="product-rating-container">
-                    <img class="product-rating-stars">
-                    <div class="product-rating-count"> 90</div>
+                    <img class="product-rating-stars" src="images/ratings/rating-${(product.rating.stars)* 10}.png">
+                    <div class="product-rating-count"> ${product.rating.count}</div>
                 </div>
-                <div class="product-price"></div>
+                <div class="product-price">
+                    ${((product.priceCents)/10).toFixed(2)}
+                </div>
                 <div class="product-quantity-container">
                     <select>
                         <option selected value="1">1</option>
@@ -22,8 +29,12 @@
 
                 <div class="product-spacer"></div>
                 <div class="added-to-cart">
-                    <button class="add-to-cart-button">
+                    <button class="add-to-cart-button button-primary">
                         Add to Cart
                     </button>
                 </div>
-            </div> */}
+            </div> 
+
+    `;   
+});
+productGrid.innerHTML=prodHtml;
