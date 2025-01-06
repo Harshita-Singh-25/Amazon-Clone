@@ -16,7 +16,7 @@
     width: 280px;
 }
 .product-img-container{
-    height: 200px;
+    height: 230px;
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
@@ -52,8 +52,16 @@
 .button-primary{
     width: 100%;
     background-color: rgb(255, 216, 20);
-    border: 1px solid rgb(255, 216, 20); ;
+    border: 1px solid rgb(255, 216, 20); 
     height: 34px;
     border-radius: 17px;
     cursor: pointer;
 }
+.button-primary:hover{
+    background-color: rgb(231, 195, 13);
+    border: 1px solid rgb(207, 174, 5); 
+
+}
+
+
+  
